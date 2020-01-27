@@ -2,6 +2,9 @@
   <nav class="navbar navbar-light bg-light" style="background-color: #83c9ad">
     <h3 class="text-center" style="color: #403e38; margin-bottom: 20px;"> Welcome to Kalo Boutique</h3>
   </nav>
+   <div class="col-md-12 text-center">
+    <%= flash_messages %>
+   </div>
   <div class="main-container">
     <div class="kalo-logo">
       <%= image_tag 'KALO_COLOR.png'%>
@@ -14,17 +17,17 @@
       <%= form_for User.new do |f| %>
         <div class="form-group">
           <label> First Name </label>
-          <%= f.text_field :first_name, class: 'form-control' %>
+          <%= f.text_field :first_name, class: 'form-control', required: true %>
         </div>
 
         <div class="form-group">
           <label> Last Name </label>
-          <%= f.text_field :last_name, class: 'form-control' %>
+          <%= f.text_field :last_name, class: 'form-control', required: true %>
         </div>
 
         <div class="form-group">
           <label> Email </label>
-          <%= f.text_field :email, class: 'form-control' %>
+          <%= f.text_field :email, class: 'form-control', required: true %>
         </div>
 
         <div class="form-group text-center" style="padding-top:30px">
@@ -36,7 +39,15 @@
   
 </div>
 <footer class="text-center">
-  <div style="border-top: 2px #dcdcdc solid">
-    <h4>Kalo Boutique 2020</h4>
+  <div style="border-top: 1px #dcdcdc solid">
+    <h4 style="color: #9a9a9a; font-weight: 400 ">KALO BOUTIQUE 2020</h4>
   </div>
 </footer>
+
+<script>
+
+$(document).ready(function(){
+  setTimeout(function() { $('button.close').click() }, 10000);
+})
+
+</script>

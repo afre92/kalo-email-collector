@@ -11,7 +11,9 @@
  * It is generally better to create a new file per style scope.
  *
  *= require_tree .
+ *= require jquery-ui
  *= require_self
+ 
  */
  @import "bootstrap-sprockets";
  @import "bootstrap";
@@ -49,9 +51,12 @@
   display: block;
   width: 100%;
   border: none;
-  background-color: #4CAF50;
   padding: 14px 28px;
   font-size: 24px;
   cursor: pointer;
   text-align: center;
+}
+
+.alert {
+  font-size: 20px;
 }
