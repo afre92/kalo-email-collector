@@ -1,5 +1,5 @@
 <div>
-  <nav class="navbar navbar-light bg-light" style="background-color: #83c9ad; height: 20px;">
+  <nav class="navbar navbar-light bg-light" style="background-color: #83c9ad; height: 20px; margin-bottom: 10px;">
     <h6 class="text-center" style="color: #403e38; margin-bottom: 5px;"> Welcome to Kalo Boutique</h6>
   </nav>
    <div class="col-md-12 text-center">
@@ -10,17 +10,17 @@
       <%= image_tag 'KALO_COLOR.png'%>
     </div>
     <div class="text-center" style="color: #403e38;">
-      <h2>SIGN UP FOR KALO NEWSLETTER!</h2>
-      <p style="color: #aba9a9; font-size:20px"> Duis aute irure dolor in reprehenderit </p>
+      <h2>SIGN UP FOR KALO NEWSLETTER</h2>
+      <p style="color: #aba9a9; font-size:20px"> To get your promo code and special offers </p>
     </div>
     <div class="form-container">
       <%= form_for User.new do |f| %>
         <div class="form-group">
-          <div class="col-md-6 pl-0" style="padding-left: 0px; padding-right: 5px">
+          <div class="col-md-6 col-sm-6 pl-0" style="padding-left: 0px; padding-right: 5px">
             <label> First Name </label>
             <%= f.text_field :first_name, class: 'form-control', required: true %>
           </div>
-          <div class="col-md-6 pd-0" style="padding-right: 0px; padding-left: 5px">
+          <div class="col-md-6 col-sm-6 pd-0" style="padding-right: 0px; padding-left: 5px">
             <label> Last Name </label>
             <%= f.text_field :last_name, class: 'form-control', required: true %>
           </div>
@@ -33,23 +33,23 @@
         </div>
 
         <div class="form-group text-center" style="padding-top:30px">
-          <button class="btn btn-primary btn-lg block" type="submit">Sign Up</button>
+          <button class="btn btn-primary btn-lg block" type="submit">SUBMIT</button>
         </div>
       <% end %>
     </div>
   </div>
   
 </div>
-<footer class="text-center">
+<%# <footer class="text-center">
   <div style="border-top: 1px #dcdcdc solid">
     <h4 style="color: #9a9a9a; font-weight: 400 ">KALO BOUTIQUE 2020</h4>
   </div>
-</footer>
+</footer> %>
 
 <script>
 
-$(document).ready(function(){
-  setTimeout(function() { $('button.close').click() }, 10000);
-})
+// $(document).ready(function(){
+//   setTimeout(function() { $('button.close').click() }, 10000);
+// })
 
 </script>
