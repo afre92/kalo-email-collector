@@ -73,6 +73,8 @@ Rails.application.configure do
   # the I18n.default_locale when a translation cannot be found).
   config.i18n.fallbacks = true
 
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.default_url_options = { host: "https://kalo-email-collector.herokuapp.com/" }
   # Send deprecation notices to registered listeners.
   config.active_support.deprecation = :notify
 

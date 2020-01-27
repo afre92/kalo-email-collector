@@ -4,7 +4,7 @@ class UsersController < ApplicationController
     @user = User.create(user_params)
 
     if @user.save
-      # UserNotifierMailer.send_signup_email(@user).deliver
+      UserNotifierMailer.send_signup_email(@user).deliver
       redirect_to('/', notice: "Sign up Succesfull #{@user.first_name}, Please check your email for promotion code")
     else
       redirect_to('/', warning: 'Oops something went wrong!')
